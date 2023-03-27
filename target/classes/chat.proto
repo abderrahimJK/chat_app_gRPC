@@ -1,0 +1,22 @@
+syntax="proto3";
+option java_package="dev.elma.stubs";
+
+service chatApp{
+  rpc sendMsg(stream request) returns (stream request);
+  rpc join(connect) returns (request);
+  rpc leve(connect) returns(request);
+}
+message request{
+  string msgFrom=1;
+  string msgTo=2;
+  string msg=3;
+}
+message User {
+  string id=1;
+  string name=2;
+}
+
+message connect{
+  User user = 1;
+}
+
