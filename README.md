@@ -9,7 +9,7 @@ option java_package="dev.elma.stubs";
 service chatApp{
   rpc sendMsg(stream request) returns (stream request);
   rpc join(connect) returns (request);
-  rpc leve(connect) returns(request);
+  rpc leave(connect) returns(request);
 }
 message request{
   string msgFrom=1;
